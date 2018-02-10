@@ -13,7 +13,7 @@ var connMySQL = function(){
 
 
 module.exports = function(){
-   console.log('autoload carregou o modulo de banco de dados') 
+   //console.log('autoload carregou o modulo de banco de dados') 
    return connMySQL;
 } 
 

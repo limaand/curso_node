@@ -10,9 +10,9 @@ module.exports = function(app){
 
    //salvarNoticia
    var conn = app.config.dbConnection();
-   var noticiaModel = app.app.models.noticiasModel;
+   var noticiaModel =  new app.app.models.NoticiasDAO(conn);
 
-    noticiaModel.salvarNoticia(noticiasJson, conn, function(error, result ){
+    noticiaModel.salvarNoticia(noticiasJson, function(error, result ){
         res.redirect("/noticias");    
     });
 
